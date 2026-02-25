@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Digital Business Card — Edwin Abucay</title>
+  <meta name="description" content="Digital business card for Edwin Abucay — Assistant Professor, Department of Community and Environmental Resource Planning (DCERP), College of Human Ecology, University of the Philippines Los Baños." />
+
+  <style>
+    :root{
+      --bg:#0b1b13; --card:#0f2a1e; --muted:rgba(255,255,255,.72);
+      --text:rgba(255,255,255,.92); --accent:#1fbf79; --stroke:rgba(255,255,255,.12);
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f5f7f6; --card:#ffffff; --text:#101514; --muted:#4c5b56; --stroke:#e6ece9; --accent:#0a7d4f; }
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 20% 0%, rgba(31,191,121,.18), transparent 60%),
+                  radial-gradient(1000px 700px at 80% 30%, rgba(31,191,121,.12), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    .wrap{width:min(980px,100%)}
+    .card{
+      border:1px solid var(--stroke);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), transparent 35%), var(--card);
+      border-radius:24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+      overflow:hidden;
+    }
+    header{
+      display:flex;
+      gap:18px;
+      padding:26px 26px 18px;
+      border-bottom:1px solid var(--stroke);
+      align-items:center;
+    }
+    .avatar{
+      width:84px; height:84px;
+      border-radius:20px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.08);
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
+      flex:0 0 auto;
+    }
+    .avatar img{width:100%; height:100%; object-fit:cover}
+    .title h1{margin:0; font-size:26px; line-height:1.15}
+    .title .role{margin-top:6px; color:var(--muted); font-size:14px}
+    .badges{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap}
+    .badge{
+      font-size:12px; padding:6px 10px;
+      border:1px solid var(--stroke);
+      border-radius:999px;
+      color:var(--muted);
+      background: rgba(255,255,255,.04);
+    }
+    .grid{display:grid; grid-template-columns: 1.1fr .9fr; gap:0}
+    @media (max-width: 860px){ .grid{grid-template-columns:1fr} }
+    section{padding:22px 26px}
+    section + section{border-left:1px solid var(--stroke)}
+    @media (max-width: 860px){ section + section{border-left:none; border-top:1px solid var(--stroke)} }
+    h2{font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:0 0 12px}
+    .row{display:flex; justify-content:space-between; gap:14px; padding:10px 0; border-bottom:1px dashed var(--stroke)}
+    .row:last-child{border-bottom:none}
+    .k{color:var(--muted); font-size:13px}
+    .v{font-size:14px; text-align:right; word-break:break-word}
+    a{color:inherit}
+    .actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:10px 14px; border-radius:14px; border:1px solid var(--stroke);
+      background: rgba(255,255,255,.05); color:var(--text); text-decoration:none;
+      font-weight:600; font-size:14px;
+    }
+    .btn.primary{border-color: rgba(31,191,121,.45); background: rgba(31,191,121,.16)}
+    footer{
+      padding:14px 26px 20px;
+      border-top:1px solid var(--stroke);
+      color:var(--muted);
+      font-size:12px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .small{color:var(--muted); font-size:13px; margin:14px 0 0}
+    code.inline{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size:12px; padding:2px 6px; border-radius:8px; border:1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Edwin Abucay",
+    "jobTitle":"Assistant Professor",
+    "affiliation":{"@type":"Organization","name":"Department of Community and Environmental Resource Planning (DCERP), College of Human Ecology, University of the Philippines Los Baños"},
+    "email":"mailto:erabucay@up.edu.ph",
+    "telephone":"+639182995307",
+    "url":"https://dcerp.che.uplb.edu.ph",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Gil F. Saguiguit, Sr. Hall, Harold Cuzner Royal Palm Avenue",
+      "addressLocality":"Los Baños",
+      "addressRegion":"Laguna",
+      "postalCode":"4031",
+      "addressCountry":"PH"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <main class="wrap">
+    <div class="card" role="region" aria-label="Digital business card">
+      <header>
+        <div class="avatar" aria-label="Profile photo">
+          <!-- Optional: put profile.jpg next to this file -->
+          <img src="profile.jpg" alt="Profile photo" onerror="this.remove(); this.parentElement.textContent='EA';" />
+        </div>
+        <div class="title">
+          <h1>Prof. Edwin Abucay</h1>
+          <div class="role">
+            <strong>Assistant Professor</strong> · <span>Department of Community and Environmental Resource Planning (DCERP), College of Human Ecology, University of the Philippines Los Baños</span>
+          </div>
+          <div class="badges">
+            <span class="badge">UP Los Baños</span>
+            <span class="badge">Environmental Planning</span>
+            <span class="badge">GIS / Remote Sensing</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="grid">
+        <section>
+          <h2>Contact</h2>
+
+          <div class="row">
+            <div class="k">Mobile</div>
+            <div class="v"><a href="tel:+639182995307">+63 918 299 5307</a></div>
+          </div>
+          <div class="row">
+            <div class="k">Email</div>
+            <div class="v"><a href="mailto:erabucay@up.edu.ph">erabucay@up.edu.ph</a></div>
+          </div>
+          <div class="row">
+            <div class="k">Website</div>
+            <div class="v"><a href="https://dcerp.che.uplb.edu.ph" target="_blank" rel="noopener">dcerp.che.uplb.edu.ph</a></div>
+          </div>
+
+          <div class="actions">
+            <a class="btn primary" href="mailto:erabucay@up.edu.ph">Email</a>
+            <a class="btn" href="tel:+639182995307">Call</a>
+            <a class="btn" href="#vcard" onclick="downloadVCard(); return false;">Download vCard</a>
+          </div>
+
+          <p class="small">
+            
+          </p>
+        </section>
+
+        <section>
+          <h2>Office</h2>
+
+          <div class="row">
+            <div class="k">Office</div>
+            <div class="v">Department of Community and Environmental Resource Planning (DCERP), College of Human Ecology, University of the Philippines Los Baños</div>
+          </div>
+
+          <div class="row">
+            <div class="k">Address</div>
+            <div class="v">
+              Gil F. Saguiguit, Sr. Hall, Harold Cuzner Royal Palm Avenue<br>University of the Philippines Los Baños, College, Batong Malake<br>Los Baños, Laguna 4031, Philippines
+            </div>
+          </div>
+
+          <div class="actions">
+            <a class="btn" href="https://maps.google.com/?q=Gil%20F.%20Saguiguit,%20Sr.%20Hall,%20Harold%20Cuzner%20Royal%20Palm%20Avenue,%20University%20of%20the%20Philippines%20Los%20Baños,%20College,%20Batong%20Malake,%20Los%20Baños,%20Laguna%204031,%20Philippines" target="_blank" rel="noopener">Directions</a>
+            <a class="btn" href="https://dcerp.che.uplb.edu.ph" target="_blank" rel="noopener">Open Website</a>
+          </div>
+
+        </section>
+      </div>
+
+      <footer>
+        <div>© <span id="year"></span> Edwin Abucay</div>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Your vCard (as provided)
+    const VCARD_TEXT = 'BEGIN:VCARD\nVERSION:4.0\nN:Abucay;Edwin;\nFN:Edwin Abucay\nORG:Department of Community and Environmental Resource Planning, College of Human Ecology, University of the Philippines Los Banos;\nTEL;TYPE=mobile;TYPE=pref:+639182995307\nEMAIL;TYPE=INTERNET;TYPE=WORK:erabucay@up.edu.ph\nADR;TYPE=WORK:;;Gil F. Saguiguit, Sr. Hall, Harold Cuzner Royal Palm Avenue\\nUniversity of the Philippines Los Baños, College Batong Malake;Los Baños;Laguna, Philippines;4031;\nTITLE:Assitant Professor\nURL:https://dcerp.che.uplb.edu.ph\nEND:VCARD';
+
+    function downloadVCard(){
+      const blob = new Blob([VCARD_TEXT + "\n"], {type: "text/vcard;charset=utf-8"});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Edwin_Abucay.vcf";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+    window.downloadVCard = downloadVCard;
+  </script>
+</body>
+</html>
