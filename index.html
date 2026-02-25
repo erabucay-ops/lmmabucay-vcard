@@ -205,14 +205,14 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 
     // Your vCard (as provided)
-    const VCARD_TEXT = 'BEGIN:VCARD\nVERSION:4.0\nN:Abucay;Lavinia Marie;\nFN:Lavinia Marie Abucay\nORG:Office of the Vice Chancellor for Extension (OVCRE), University of the Philippines Los Banos;\nTEL;TYPE=mobile;TYPE=pref:+639182995307\nEMAIL;TYPE=INTERNET;TYPE=WORK:lamanaig@up.edu.ph\nADR;TYPE=WORK:;;OVCRE Annex, Andres P. Aglibut Ave. corner Jose R. Velasco Ave., University of the Philippines Los Baños, College Batong Malake;Los Baños;Laguna, Philippines;4031;\nTITLE:University Extension Specialist II\nURL:https://ovcre.uplb.edu.ph\nEND:VCARD';
+    const VCARD_TEXT = 'BEGIN:VCARD\nVERSION:4.0\nN:Abucay;Lavinia Marie;\nFN:Lavinia Marie Abucay\nORG:Office of the Vice Chancellor for Extension (OVCRE), University of the Philippines Los Banos;\nTEL;TYPE=mobile;TYPE=pref:+639064944811\nEMAIL;TYPE=INTERNET;TYPE=WORK:lamanaig@up.edu.ph\nADR;TYPE=WORK:;;OVCRE Annex, Andres P. Aglibut Ave. corner Jose R. Velasco Ave., University of the Philippines Los Baños, College Batong Malake;Los Baños;Laguna, Philippines;4031;\nTITLE:University Extension Specialist II\nURL:https://ovcre.uplb.edu.ph\nEND:VCARD';
 
     function downloadVCard(){
       const blob = new Blob([VCARD_TEXT + "\n"], {type: "text/vcard;charset=utf-8"});
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "Edwin_Abucay.vcf";
+      a.download = "LaviniaMarieAbucay.vcf";
       document.body.appendChild(a);
       a.click();
       a.remove();
